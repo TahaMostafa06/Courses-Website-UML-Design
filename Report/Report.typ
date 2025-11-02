@@ -102,7 +102,7 @@
 
 = Use Case Diagram
 == Outline
-Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam explicabo et voluptatem quia 33 possimus explicabo ut repellat nihil. Vel galisum quam sed dignissimos eligendi et molestias consequatur.
+Use case diagram is a diagram that shows the relation between actors and use cases. The actors (users that use the system) are students, instructors and admins. The use cases (functions provided) include: enroll in courses, creating courses and approve courses.
 == Diagram
 #figure(
   image("../Diagrams/export/1- Use Case.svg", scaling: "smooth", width: 100%),
@@ -111,7 +111,7 @@ Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam expli
 
 = Activity Diagram
 == Outline
-Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam explicabo et voluptatem quia 33 possimus explicabo ut repellat nihil. Vel galisum quam sed dignissimos eligendi et molestias consequatur.
+This is the activity diagram for the "Enroll in Course" use-case. It shows the detailed workflow that the actor (student) goes through in order to achieve the use case. It provides an abstract, flowchart-like overview of the use-case.
 == Diagram
 #figure(
   image("../Diagrams/export/2- Activity Diagram.svg", scaling: "smooth", width: 100%),
@@ -120,7 +120,7 @@ Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam expli
 
 = Class Diagram
 == Outline
-Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam explicabo et voluptatem quia 33 possimus explicabo ut repellat nihil. Vel galisum quam sed dignissimos eligendi et molestias consequatur.
+The class diagram is the closest specification level to the underlying program code. It specifies the hierarchy and structure of the classes and the relationships between them. It can be used as a reference when designing a sequence diagram.
 == Diagram
 #figure(
   image("../Diagrams/export/3- Class Diagram.svg", scaling: "smooth", width: 100%),
@@ -129,7 +129,7 @@ Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam expli
 
 = Sequence Diagram
 == Outline
-Lorem ipsum dolor sit amet. Qui quia iusto et eaque galisum nam laboriosam explicabo et voluptatem quia 33 possimus explicabo ut repellat nihil. Vel galisum quam sed dignissimos eligendi et molestias consequatur.
+This is  the sequence diagram for the "Enroll in Course" use-case, which is a _temporal specification_ of the messages (method calls and return values) between objects and classes of the program while this use-case is performed. It outlines the _sequence_ of the flow of control and information internally from the viewpoint of each object or class rather than the workflow of the actor. It also showcases the lifetimes of objects as well as duration and level of message processing (method calls).
 == Diagram
 #figure(
   image("../Diagrams/export/4- Sequence Diagram.svg", scaling: "smooth", width: 100%),
