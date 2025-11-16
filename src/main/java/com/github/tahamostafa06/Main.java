@@ -1,10 +1,9 @@
 package com.github.tahamostafa06;
 
 import com.google.gson.Gson;
-import com.google.gson.JsonParser;
 
 class Test {
-    public final String e;
+    private final String e;
     public final String b;
 
     public Test(String e, String b) {

@@ -1,13 +1,8 @@
 package com.github.tahamostafa06.backend.database;
 
 import java.io.IOException;
-import java.util.Map.Entry;
 
-import com.github.tahamostafa06.backend.userservice.Instructor;
-import com.github.tahamostafa06.backend.userservice.Student;
-import com.github.tahamostafa06.backend.userservice.User;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
+import com.github.tahamostafa06.backend.database.records.User;
 
 public class UserDatabase extends JsonDatabase<User> {
 
@@ -16,20 +11,24 @@ public class UserDatabase extends JsonDatabase<User> {
 
     }
 
-    @Override
-    protected User parseEntry(Entry<String, JsonElement> entry) {
-        var userId = entry.getKey();
-        var role = entry.getValue().getAsJsonObject().get("role").getAsString();
-        var userData = entry.getValue().getAsJsonObject();
-        userData.addProperty("userId", userId);
-        var gson = new Gson();
-        if (role.equals("Student")) {
-            return gson.fromJson(userData, Student.class);
-        } else if (role.equals("Instructor")) {
-            return gson.fromJson(userData, Instructor.class);
-        } else {
-            return gson.fromJson(userData, User.class);
+    public User getUserByUserId(String userId) {
+        return this.getRecord(userId);
+    }
+
+    public User getUserByUsername(String username) {
+        for (var user : this.records.values()) {
+            if (user.getUsername().equals(username))
+                return user;
         }
+        return null;
+    }
+
+    public String getRoleByUsername(String username) {
+        for (var user : this.records.values()) {
+            if (user.getUsername().equals(username))
+                return user.getRole();
+        }
+        return null;
     }
 
 }
